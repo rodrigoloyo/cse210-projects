@@ -73,6 +73,7 @@ def sequence_board (board):
     return board
 
 def check_board (board):
+  """This will validate if X or O are three in the row to send True."""
    for x in board[0]:
        if  "X" != x:
            print("test")
