@@ -146,6 +146,9 @@ def check_board (board):
     
  
 def check_board_column(board):
+
+    """This function will validate if X or O are three in the same column """
+
     
     result = None
     for i in board:
@@ -191,6 +194,8 @@ def check_board_column(board):
     return result
 
 def check_board_diagonal(board):
+    """This will validate if X or O are three in the diagonal."""
+
     
     
     result = None
@@ -217,8 +222,7 @@ def check_board_diagonal(board):
 
     if index_1 == index_5 == index_9:
         
-           print("true")
-           result = True
+            result = True
         
         
     elif index_3 == index_5 == index_7:
