@@ -227,7 +227,7 @@ def check_board_diagonal(board):
  
     
     else:
-            print("diagonal")
+            
             result = False
     
           
