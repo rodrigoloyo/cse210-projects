@@ -70,18 +70,6 @@ def main():
         board = sequence_board(board)
         
         
-        # answer = check_board(board,0,"O")
-
-        # if answer == True:
-        #         break
-        # answer = check_board(board,1,"O")
-        # if answer == True:
-
-        #       break 
-
-        # answer = check_board(board,2,"O")
-        # if answer == True:
-        #     break 
         answer = check_board(board)
 
         if answer == True:
@@ -156,21 +144,7 @@ def check_board (board):
    return result
 
     
-#    for x in board[index]:
-#        if  value != x:
-#             result = False
-         
-#             break
-       
-            
-#        else:
-         
-#           result = True
-
-           
-
-#    return result
-
+ 
 def check_board_column(board):
     
     result = None
@@ -217,7 +191,7 @@ def check_board_column(board):
     return result
 
 def check_board_diagonal(board):
-    print("diagonal")
+    
     
     result = None
     for i in board:
