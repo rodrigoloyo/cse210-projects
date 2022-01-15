@@ -16,11 +16,12 @@ def main():
     while answer != True:
         
         
-        print("TIC TAC TOE")
+        print("+-TIC TAC TOE-+")
         board = sequence_board(board)
         
  
         #User 1 turn
+        print()
         d = int(input("insert a number for X user "))
         
         if d in board[0]:
@@ -31,8 +32,9 @@ def main():
         elif d in board[2]:
             board[2] [d-7] = "X"
       
+        print()
+        print("+-TIC TAC TOE-+")
         
-        print("TIC TAC TOE")
         board = sequence_board(board)
         if count == 4:
               print("Well played, but no one wins")
@@ -42,61 +44,85 @@ def main():
         answer = check_board(board)
 
         if answer == True:
-                print("user X Wins")
+                print("User 'X' wins")
                 break
          
         answer = check_board_column(board)
         if answer == True:
-            print("user X Wins")
+            print("User 'X' wins")
             break 
         answer = check_board_diagonal(board)
         if answer == True:
-            print("user X Wins")
+            print("User 'X' wins")
             break 
          
      
-        #User 2  turn     
+        #User 2  turn  
+        print()   
         d = int(input("insert a number for O user: "))
         
         if d in board[0]:
             board[0][d-1] = "O"            
         elif d in board[1]:
-            print(board[1])
             board[1][d-4] = "O"
         elif d in board[2]:
             board[2] [d-7] = "O"
-
-        print("TIC TAC TOE")
+        print()
+        print("+-TIC TAC TOE-+")
         board = sequence_board(board)
         
         
         answer = check_board(board)
 
         if answer == True:
-                print("user O Wins")
+                print("User 'O' Wins")
                 break
         answer = check_board_column(board)
         if answer == True:
-            print("user O Wins")
+            print("User 'O' Wins")
             break 
         answer = check_board_diagonal(board)
         if answer == True:
-            print("user O Wins")
+            print("User 'O' Wins")
             break 
         count +=1 
         print(count)
         if count == 5:
-              print("no one wins")
+              print("No one wins")
               answer = True
         
      
     
 def sequence_board (board):
-    for row in board:
-            print(row)
-            print("+-+-+-+-+-+-+-")
+   for i in board:
+        row_1 = board[0]
+        row_2 = board[1]
+        row_3 = board[2]
+   for j in row_1:
+        index_1 = row_1[0]
+        index_2 = row_1[1]
+        index_3 = row_1[2]
 
-    return board
+   for k in row_2:
+        index_4 = row_2[0]
+        index_5 = row_2[1]
+        index_6 = row_2[2]
+
+   for l in row_3:
+        index_7 = row_3[0]
+        index_8 = row_3[1]
+        index_9 = row_3[2]
+
+   print(index_1 , " | " , index_2 , " | " , index_3 )
+   print("-+-+-+--+-+-+-+-")
+   print(index_4 , " | " , index_5 , " | " , index_6 )
+   print("-+-+-+--+-+-+-+-")
+   print(index_7 , " | " , index_8 , " | " , index_9 )
+ 
+
+
+
+   return board
 
 def check_board (board):
    """This will validate if X or O are three in the row to send True."""
@@ -233,8 +259,7 @@ def check_board_diagonal(board):
     else:
             
             result = False
-    
-          
+              
      
     return result
 
